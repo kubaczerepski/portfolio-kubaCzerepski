@@ -1,4 +1,3 @@
-@import url(_colors.scss);
 html {
   scroll-behavior: smooth;
 }
@@ -6,5 +5,167 @@ html {
 body {
   margin: 0;
   padding: 0;
+  color: #2d3436;
+  background-color: #f1f2f6;
+  font-family: 'Glory', "Arial";
+  overflow: hidden;
+}
+
+body .mainContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .mainContainer .topHeader {
+  position: relative;
+  width: 100%;
+  height: 3em;
+  top: 0;
+  -webkit-box-shadow: 0px 3px rgba(0, 0, 0, 0.19);
+          box-shadow: 0px 3px rgba(0, 0, 0, 0.19);
+}
+
+body .mainContainer .topHeader nav {
+  text-align: center;
+  padding-right: 15px;
+}
+
+body .mainContainer .topHeader nav li {
+  display: inline-block;
+  padding: 0px 12px;
+}
+
+body .mainContainer .topHeader nav li a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #2d3436;
+}
+
+body .mainContainer .nameBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem 0rem;
+  text-align: center;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+body .mainContainer .nameBox .nameHeader h1 {
+  font-size: 46px;
+  display: block;
+  margin-bottom: -20px;
+}
+
+body .mainContainer .nameBox .nameHeader hr {
+  width: 30px;
+  border: none;
+}
+
+body .mainContainer .nameBox .nameHeader h3 {
+  font-size: 26px;
+}
+
+body .mainContainer .infoBasic {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem 0rem;
+  text-align: center;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  font-weight: bold;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+body .mainContainer .infoBasic a {
+  text-decoration: none;
+  color: #2d3436;
+  text-shadow: 0px 1px black;
+  cursor: pointer;
+}
+
+body .mainContainer .infoBasic .infoBlockOne {
+  text-align: center;
+}
+
+body .mainContainer .infoBasic hr {
+  width: 30px;
+  border: none;
+}
+
+body .mainContainer .ctaButtonBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem 0rem;
+  text-align: center;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+body .mainContainer .ctaButtonBox .ctaButton {
+  padding: 1rem 1rem;
+  background: #2d3436;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #f1f2f6;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+body .mainContainer .ctaButtonBox .ctaButton:hover {
+  border: 1px solid #2d3436;
+  background: #f1f2f6;
+  color: #2d3436;
+  -webkit-transition: ease-in-out .2s;
+  transition: ease-in-out .2s;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  font-weight: bold;
 }
 /*# sourceMappingURL=mainStyles.css.map */

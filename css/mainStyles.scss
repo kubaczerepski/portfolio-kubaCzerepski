@@ -1,25 +1,117 @@
-@import url(_colors.scss);
+@import"./_colors";
 html{
     scroll-behavior: smooth;
-    width: 100%;
-    height: 100%;
 }
 body{
-    width: 100%;
     margin: 0;
     padding: 0;
     color: $accentColor;
     background-color: $mainColor;
+    font-family: 'Glory', "Arial";
+    overflow: hidden;
     .mainContainer{
-        position: relative;
-        width: 100%;
-        height: 100%;
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        flex-direction: column;
         .topHeader{
-            position: fixed;
+            position: relative;
+            width: 100%;
+            height: 3em;
             top:0;
+            box-shadow: 0px 3px rgba( #000000, 0.19);
+            nav{
+                text-align: center;
+                padding-right: 15px;
+                li{
+                    display: inline-block;
+                    padding: 0px 12px;
+                    a{
+                        text-decoration: none;
+                        cursor: pointer;
+                        color: $accentColor;
+                    }
+                }
             }
-        .nameHeader{
-            margin: 0 auto;
         }
+        .nameBox{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem 0rem;
+            text-align: center;
+            transition: all 0.3s;
+            .nameHeader{
+                h1{
+                    font-size: 46px;
+                    display: block;
+                    margin-bottom: -20px; 
+                }
+                hr{
+                    width: 30px;
+                    border: none;
+                }
+                h3{
+                    font-size: 26px;
+                }
+            }
         }
+        .infoBasic{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem 0rem;
+            text-align: center;
+            transition: all 0.3s;
+            font-weight: bold;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+            a{
+                text-decoration: none;
+                color: $accentColor;
+                text-shadow: 0px 1px black;
+                cursor: pointer;
+            }
+            .infoBlockOne{
+                text-align: center;
+
+            }
+            hr{
+                width: 30px;
+                border: none;
+            }
+        }
+        .ctaButtonBox{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem 0rem;
+            text-align: center;
+            transition: all 0.3s;
+            .ctaButton{
+                padding: 1rem 1rem;
+                background: $accentColor;
+                border-radius: 5px;
+                text-decoration: none;
+                color: $mainColor;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+            }
+            .ctaButton:hover{
+                border: 1px solid $accentColor;
+                background: $mainColor;
+                color: $accentColor;
+                transition: ease-in-out .2s;
+                box-shadow: none;
+                font-weight: bold;
+            }
+        }
+    }
 }
