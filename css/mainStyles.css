@@ -1,0 +1,10 @@
+@import url(_colors.scss);
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+/*# sourceMappingURL=mainStyles.css.map */

@@ -1,0 +1,25 @@
+@import url(_colors.scss);
+html{
+    scroll-behavior: smooth;
+    width: 100%;
+    height: 100%;
+}
+body{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    color: $accentColor;
+    background-color: $mainColor;
+    .mainContainer{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        .topHeader{
+            position: fixed;
+            top:0;
+            }
+        .nameHeader{
+            margin: 0 auto;
+        }
+        }
+}
