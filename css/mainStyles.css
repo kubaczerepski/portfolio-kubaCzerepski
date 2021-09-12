@@ -43,9 +43,44 @@ body .mainContainer .topHeader nav li {
 }
 
 body .mainContainer .topHeader nav li a {
+  position: relative;
+  z-index: 1;
   text-decoration: none;
   cursor: pointer;
   color: #2d3436;
+}
+
+body .mainContainer .topHeader nav li a:after {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  height: 1px;
+  content: ' ';
+  color: transparent;
+  background: #2d3436;
+  visibility: none;
+  opacity: 0;
+  z-index: -1;
+}
+
+body .mainContainer .topHeader nav li a:hover:after {
+  opacity: 1;
+  visibility: visible;
+  height: 100%;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  color: #f1f2f6;
+}
+
+body .mainContainer .topHeader nav li a:hover {
+  color: #f1f2f6;
+  -webkit-transition: all .3s;
+  transition: all .3s;
 }
 
 body .mainContainer .nameBox {
@@ -126,6 +161,17 @@ body .mainContainer .infoBasic hr {
   border: none;
 }
 
+body .mainContainer .infoBasic .infoEmail {
+  text-shadow: 1px solid #2d3436;
+}
+
+body .mainContainer .infoBasic:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
 body .mainContainer .ctaButtonBox {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -167,5 +213,39 @@ body .mainContainer .ctaButtonBox .ctaButton:hover {
   -webkit-box-shadow: none;
           box-shadow: none;
   font-weight: bold;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #f1f2f6;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  background-color: #f1f2f6;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #2d3436;
+}
+
+@media (min-width: 900px) {
+  body .mainContainer .topHeader nav {
+    padding-right: 2em;
+  }
+  body .mainContainer .topHeader nav a {
+    padding: 10px;
+  }
+  body .mainContainer .infoBasic {
+    width: 60%;
+    margin: 0 auto;
+    border-radius: 5px;
+  }
+  body .mainContainer .infoBlockOne {
+    text-align: justify;
+  }
 }
 /*# sourceMappingURL=mainStyles.css.map */
