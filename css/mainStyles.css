@@ -5,8 +5,8 @@ html {
 body {
   margin: 0;
   padding: 0;
-  color: #2d3436;
-  background-color: #f1f2f6;
+  color: #708090;
+  background-color: #1A1A1D;
   font-family: 'Glory', "Arial";
   overflow: hidden;
 }
@@ -40,6 +40,7 @@ body .mainContainer .topHeader nav {
 body .mainContainer .topHeader nav li {
   display: inline-block;
   padding: 0px 12px;
+  font-weight: bold;
 }
 
 body .mainContainer .topHeader nav li a {
@@ -47,7 +48,7 @@ body .mainContainer .topHeader nav li a {
   z-index: 1;
   text-decoration: none;
   cursor: pointer;
-  color: #2d3436;
+  color: #708090;
 }
 
 body .mainContainer .topHeader nav li a:after {
@@ -62,7 +63,7 @@ body .mainContainer .topHeader nav li a:after {
   height: 1px;
   content: ' ';
   color: transparent;
-  background: #2d3436;
+  background: #708090;
   visibility: none;
   opacity: 0;
   z-index: -1;
@@ -74,11 +75,11 @@ body .mainContainer .topHeader nav li a:hover:after {
   height: 100%;
   -webkit-transition: all .3s;
   transition: all .3s;
-  color: #f1f2f6;
+  color: #1A1A1D;
 }
 
 body .mainContainer .topHeader nav li a:hover {
-  color: #f1f2f6;
+  color: #1A1A1D;
   -webkit-transition: all .3s;
   transition: all .3s;
 }
@@ -149,7 +150,7 @@ body .mainContainer .infoBasic {
 
 body .mainContainer .infoBasic a {
   text-decoration: none;
-  color: #2d3436;
+  color: #708090;
   text-shadow: 0px 1px black;
   cursor: pointer;
 }
@@ -164,7 +165,7 @@ body .mainContainer .infoBasic hr {
 }
 
 body .mainContainer .infoBasic .infoEmail {
-  text-shadow: 1px solid #2d3436;
+  text-shadow: 1px solid #708090;
 }
 
 body .mainContainer .infoBasic:hover {
@@ -198,18 +199,18 @@ body .mainContainer .ctaButtonBox {
 
 body .mainContainer .ctaButtonBox .ctaButton {
   padding: 1rem 1rem;
-  background: #2d3436;
+  background: #708090;
   border-radius: 5px;
   text-decoration: none;
-  color: #f1f2f6;
+  color: #1A1A1D;
   -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
           box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
 body .mainContainer .ctaButtonBox .ctaButton:hover {
-  border: 1px solid #2d3436;
-  background: #f1f2f6;
-  color: #2d3436;
+  border: 1px solid #708090;
+  background: #1A1A1D;
+  color: #708090;
   -webkit-transition: ease-in-out .2s;
   transition: ease-in-out .2s;
   -webkit-box-shadow: none;
@@ -235,8 +236,8 @@ body .mainContainer .footerSection .footerBox {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 0rem 2rem;
-  -webkit-box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.19), 0 -6px 6px rgba(0, 0, 0, 0.23);
-          box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.19), 0 -6px 6px rgba(0, 0, 0, 0.23);
+  -webkit-box-shadow: 0px -3px rgba(0, 0, 0, 0.19);
+          box-shadow: 0px -3px rgba(0, 0, 0, 0.19);
 }
 
 body .mainContainer .footerSection .footerBox .footerCopyright {
@@ -253,7 +254,7 @@ body .mainContainer .footerSection .footerBox .footerIcons li {
 
 body .mainContainer .footerSection .footerBox .footerIcons li a {
   text-decoration: none;
-  color: #2d3436;
+  color: #708090;
 }
 
 body .mainContainer .footerSection .footerBox .footerIcons li:hover {
@@ -277,7 +278,7 @@ body .mainContainer .footerSection .footerBox .footerIcons li:hover {
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  background-color: #2d3436;
+  background-color: #708090;
 }
 
 @media (min-width: 900px) {
