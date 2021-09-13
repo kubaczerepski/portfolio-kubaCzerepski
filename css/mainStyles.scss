@@ -93,7 +93,7 @@ body{
             display: flex;
             flex-direction: column;
             text-align: center;
-            width: 100%;
+            width: 95%;
             justify-content: center;
             align-items: center;
             padding: 2rem 0rem;
@@ -101,6 +101,8 @@ body{
             transition: all 0.3s;
             font-weight: bold;
             box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+            margin: 0 auto;
+            border-radius: 5px;
             a{
                 text-decoration: none;
                 color: $accentColor;
@@ -151,6 +153,35 @@ body{
             }
             
         }
+        .footerSection{
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            .footerBox{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                padding: 0rem 2rem;
+                box-shadow: 0 -5px 20px rgba(0,0,0,0.19), 0 -6px 6px rgba(0,0,0,0.23);
+                .footerCopyright{
+                    font-weight: bold;
+                }
+                .footerIcons{
+                    list-style: none;
+                    li{
+                        display: inline-block;
+                        a{
+                            text-decoration: none;
+                            color: $accentColor;
+                        }
+                    }
+                    li:hover{
+                        transform: scale(1.25);
+                        transition: all .3s;
+                    }
+                }
+            }
+        }
     }
 }
 ::-webkit-scrollbar-track
@@ -190,6 +221,14 @@ body{
             }
             .infoBlockOne{
                 text-align: justify;
+            }
+            .footerSection{
+                .footerBox{
+                    justify-content: center;
+                    .footerIcons{
+
+                    }
+                }
             }
         }
     }
