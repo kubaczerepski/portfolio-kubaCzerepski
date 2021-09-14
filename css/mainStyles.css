@@ -197,9 +197,28 @@ body .mainContainer .nameBox {
 }
 
 body .mainContainer .nameBox .nameHeader h1 {
+  position: relative;
   font-size: 46px;
   display: block;
   margin-bottom: -20px;
+}
+
+body .mainContainer .nameBox .nameHeader h1:after {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  content: '';
+  width: 0%;
+  height: 1px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  background: #C0C0C0;
+  color: transparent;
+}
+
+body .mainContainer .nameBox .nameHeader h1:hover:after {
+  width: 100%;
 }
 
 body .mainContainer .nameBox .nameHeader hr {
@@ -208,7 +227,27 @@ body .mainContainer .nameBox .nameHeader hr {
 }
 
 body .mainContainer .nameBox .nameHeader h3 {
+  position: relative;
   font-size: 26px;
+}
+
+body .mainContainer .nameBox .nameHeader h3:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  content: '';
+  width: 0%;
+  height: 1px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  background: #C0C0C0;
+  color: transparent;
+}
+
+body .mainContainer .nameBox .nameHeader h3:hover:after {
+  width: 100%;
 }
 
 body .mainContainer .infoBasic {
@@ -247,6 +286,29 @@ body .mainContainer .infoBasic a {
 
 body .mainContainer .infoBasic .infoBlockOne {
   text-align: center;
+}
+
+body .mainContainer .infoBasic .infoBlockOne a {
+  position: relative;
+}
+
+body .mainContainer .infoBasic .infoBlockOne a:after {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  content: '';
+  width: 0%;
+  height: 1px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  background: #C0C0C0;
+  color: transparent;
+}
+
+body .mainContainer .infoBasic .infoBlockOne a:hover:after {
+  width: 100%;
 }
 
 body .mainContainer .infoBasic hr {
