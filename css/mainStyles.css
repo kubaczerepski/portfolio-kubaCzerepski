@@ -5,7 +5,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  color: #708090;
+  color: #C0C0C0;
   background-color: #1A1A1D;
   font-family: 'Glory', "Arial";
   overflow: hidden;
@@ -23,6 +23,95 @@ body .mainContainer {
           flex-direction: column;
 }
 
+body .mainContainer .circle {
+  position: absolute;
+  top: 80vh;
+  left: 45vw;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: solid 1px #C0C0C0;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  -webkit-transform: scale(0) rotate(0deg) translate(-50%, -50%);
+          transform: scale(0) rotate(0deg) translate(-50%, -50%);
+  -webkit-animation: circle 8s ease-in forwards infinite;
+          animation: circle 8s ease-in forwards infinite;
+}
+
+body .mainContainer .circle:nth-child(2) {
+  border-color: #FFF;
+}
+
+body .mainContainer .circle:nth-child(2) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  left: 15vw;
+  top: 30vh;
+}
+
+body .mainContainer .circle:nth-child(3) {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  left: 85vw;
+  top: 80vh;
+}
+
+body .mainContainer .circle:nth-child(4) {
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+  left: 25vw;
+  top: 90vh;
+}
+
+body .mainContainer .circle:nth-child(5) {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  left: 85vw;
+  top: 10vh;
+}
+
+body .mainContainer .square {
+  position: absolute;
+  top: 10vh;
+  left: 35vw;
+  width: 10px;
+  height: 10px;
+  border: solid 1px #C0C0C0;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  -webkit-transform: scale(0) rotate(0deg) translate(-50%, -50%);
+          transform: scale(0) rotate(0deg) translate(-50%, -50%);
+  -webkit-animation: circle 8s ease-in forwards infinite;
+          animation: circle 8s ease-in forwards infinite;
+}
+
+@-webkit-keyframes circle {
+  from {
+    -webkit-transform: scale(0) rotate(0deg) translate(-50%, -50%);
+            transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: scale(5) rotate(1200deg) translate(-50%, -50%);
+            transform: scale(5) rotate(1200deg) translate(-50%, -50%);
+    opacity: 0;
+  }
+}
+
+@keyframes circle {
+  from {
+    -webkit-transform: scale(0) rotate(0deg) translate(-50%, -50%);
+            transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: scale(5) rotate(1200deg) translate(-50%, -50%);
+            transform: scale(5) rotate(1200deg) translate(-50%, -50%);
+    opacity: 0;
+  }
+}
+
 body .mainContainer .topHeader {
   position: relative;
   width: 100%;
@@ -30,6 +119,7 @@ body .mainContainer .topHeader {
   top: 0;
   -webkit-box-shadow: 0px 3px rgba(0, 0, 0, 0.19);
           box-shadow: 0px 3px rgba(0, 0, 0, 0.19);
+  z-index: 1;
 }
 
 body .mainContainer .topHeader nav {
@@ -48,7 +138,7 @@ body .mainContainer .topHeader nav li a {
   z-index: 1;
   text-decoration: none;
   cursor: pointer;
-  color: #708090;
+  color: #C0C0C0;
 }
 
 body .mainContainer .topHeader nav li a:after {
@@ -63,7 +153,7 @@ body .mainContainer .topHeader nav li a:after {
   height: 1px;
   content: ' ';
   color: transparent;
-  background: #708090;
+  background: #C0C0C0;
   visibility: none;
   opacity: 0;
   z-index: -1;
@@ -150,7 +240,7 @@ body .mainContainer .infoBasic {
 
 body .mainContainer .infoBasic a {
   text-decoration: none;
-  color: #708090;
+  color: #C0C0C0;
   text-shadow: 0px 1px black;
   cursor: pointer;
 }
@@ -165,7 +255,7 @@ body .mainContainer .infoBasic hr {
 }
 
 body .mainContainer .infoBasic .infoEmail {
-  text-shadow: 1px solid #708090;
+  text-shadow: 1px solid #C0C0C0;
 }
 
 body .mainContainer .infoBasic:hover {
@@ -199,18 +289,19 @@ body .mainContainer .ctaButtonBox {
 
 body .mainContainer .ctaButtonBox .ctaButton {
   padding: 1rem 1rem;
-  background: #708090;
+  background: #C0C0C0;
   border-radius: 5px;
   text-decoration: none;
   color: #1A1A1D;
+  font-weight: bold;
   -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
           box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
 body .mainContainer .ctaButtonBox .ctaButton:hover {
-  border: 1px solid #708090;
+  border: 1px solid #C0C0C0;
   background: #1A1A1D;
-  color: #708090;
+  color: #C0C0C0;
   -webkit-transition: ease-in-out .2s;
   transition: ease-in-out .2s;
   -webkit-box-shadow: none;
@@ -236,8 +327,8 @@ body .mainContainer .footerSection .footerBox {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 0rem 2rem;
-  -webkit-box-shadow: 0px -3px rgba(0, 0, 0, 0.19);
-          box-shadow: 0px -3px rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 0px -2px rgba(0, 0, 0, 0.19);
+          box-shadow: 0px -2px rgba(0, 0, 0, 0.19);
 }
 
 body .mainContainer .footerSection .footerBox .footerCopyright {
@@ -254,7 +345,7 @@ body .mainContainer .footerSection .footerBox .footerIcons li {
 
 body .mainContainer .footerSection .footerBox .footerIcons li a {
   text-decoration: none;
-  color: #708090;
+  color: #C0C0C0;
 }
 
 body .mainContainer .footerSection .footerBox .footerIcons li:hover {
@@ -278,7 +369,7 @@ body .mainContainer .footerSection .footerBox .footerIcons li:hover {
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  background-color: #708090;
+  background-color: #C0C0C0;
 }
 
 @media (min-width: 900px) {
