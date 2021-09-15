@@ -1,5 +1,5 @@
 @import"./_colors";
-@import"./mainStyles.scss";
+@import"./mainStyles";
 *{
     box-sizing: border-box;
 }
@@ -34,6 +34,7 @@ body{
             border-color: #FFF ;
           }
           .circle:nth-child(2) {
+            display: none;
             animation-delay: 1s;
             left: 15vw;
             top: 65vh;
@@ -160,10 +161,6 @@ body{
                 h1:hover:after{
                     width: 100%;
                 }
-                hr{
-                    width: 30px;
-                    border: none;
-                }
             }
         }
         .infoBasic{
@@ -270,6 +267,16 @@ body{
                 transform: scale(1.03);
                 transition: ease-in-out 0.3s;
             }
+            .infoLangBox{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                img{
+                    height: 100px;
+                    width: 100px;
+                }
+            }
         }
     }
 }
@@ -298,6 +305,9 @@ body{
 @media (min-width: 900px) {
     body{
         .mainContainer{
+            .circle:nth-child(2){
+                display:block;
+            }
             .topHeader{
                 nav{
                     padding-right: 2em;

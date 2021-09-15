@@ -565,6 +565,7 @@ body .mainContainer .circle:nth-child(2) {
 }
 
 body .mainContainer .circle:nth-child(2) {
+  display: none;
   -webkit-animation-delay: 1s;
           animation-delay: 1s;
   left: 15vw;
@@ -734,11 +735,6 @@ body .mainContainer .textBox .textHeader h1:hover:after {
   width: 100%;
 }
 
-body .mainContainer .textBox .textHeader hr {
-  width: 30px;
-  border: none;
-}
-
 body .mainContainer .infoBasic {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -849,6 +845,27 @@ body .mainContainer .infoBasic .infoBasicAnimation:hover {
   transition: ease-in-out 0.3s;
 }
 
+body .mainContainer .infoBasic .infoLangBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .mainContainer .infoBasic .infoLangBox img {
+  height: 100px;
+  width: 100px;
+}
+
 ::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
@@ -869,6 +886,9 @@ body .mainContainer .infoBasic .infoBasicAnimation:hover {
 }
 
 @media (min-width: 900px) {
+  body .mainContainer .circle:nth-child(2) {
+    display: block;
+  }
   body .mainContainer .topHeader nav {
     padding-right: 2em;
   }
