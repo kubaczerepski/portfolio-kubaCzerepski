@@ -91,6 +91,17 @@
                 </ul>
             </div>
         </footer>
-    </main>   
+    </main>
+    <script>
+        let box = document.querySelector(".infoBasic");
+        function deleteAnimation() {
+            box.classList.remove('infoBasicAnimation');
+        }
+        function addAnimation (){
+            box.classList.add('infoBasicAnimation');
+        }
+        box.addEventListener("mouseleave",deleteAnimation);
+        box.addEventListener("mouseover",addAnimation);
+    </script>   
 </body>
 </html>
