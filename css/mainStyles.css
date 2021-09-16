@@ -271,7 +271,6 @@ body .mainContainer .infoBasic {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 2rem 0rem;
   text-align: center;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -288,6 +287,10 @@ body .mainContainer .infoBasic a {
   color: #C0C0C0;
   text-shadow: 0px 1px black;
   cursor: pointer;
+}
+
+body .mainContainer .infoBasic hr {
+  opacity: 0;
 }
 
 body .mainContainer .infoBasic .infoBlockOne {
@@ -315,11 +318,6 @@ body .mainContainer .infoBasic .infoBlockOne a:after {
 
 body .mainContainer .infoBasic .infoBlockOne a:hover:after {
   width: 100%;
-}
-
-body .mainContainer .infoBasic hr {
-  width: 30px;
-  border: none;
 }
 
 body .mainContainer .infoBasic .infoEmail {

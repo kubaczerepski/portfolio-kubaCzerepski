@@ -1,8 +1,4 @@
 @import"./_colors";
-@import"./mainStyles";
-*{
-    box-sizing: border-box;
-}
 html{
     scroll-behavior: smooth;
 }
@@ -170,7 +166,6 @@ body{
             width: 95%;
             justify-content: center;
             align-items: center;
-            padding: 2rem 0rem;
             text-align: center;
             transition: all 0.3s;
             font-weight: bold;
@@ -184,35 +179,72 @@ body{
                 text-shadow: 0px 1px black;
                 cursor: pointer;
             }
-            .infoBlockOne{
-                text-align: center;
-                a{
-                    position: relative;
-                }
-                a:after{
-                    position: absolute;
-                    bottom: 0;
-                    right: 0;
-                    left: 0;
-                    margin: auto;
-                    content: '';
-                    width: 0%;
-                    height: 1px;
-                    transition: all .3s;
-                    background: $accentColor;
-                    color: transparent;
-                }
-                a:hover:after{
-                    width: 100%;
-                }
+            p{
+                margin: 8px;
             }
-            hr{
-                width: 30px;
-                border: none;
+            .infoHeader{
+                margin-top: 10px;
+            }
+            .infoBlockOne{
+                    text-align: center;
+                    a{
+                        position: relative;
+                    }
+                    a:after{
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                        left: 0;
+                        margin: auto;
+                        content: '';
+                        width: 0%;
+                        height: 1px;
+                        transition: all .3s;
+                        background: $accentColor;
+                        color: transparent;
+                    }
+                    a:hover:after{
+                        width: 100%;
+                    }
             }
             .infoEmail{
-                text-shadow: 1px solid $accentColor;
+                    text-shadow: 1px solid $accentColor;
             }
+            .infoLangBox{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img{
+                    display: block;
+                    height: 80px;
+                    width: 80px;
+                    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+                    margin: 0px 5px;
+                    border-radius: 5px;
+                }
+                img:hover{
+                    transform: rotate(360deg);
+                    transition: all .6s;
+                }      
+            }
+            .infoLangBoxSub{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img{
+                    display: block;
+                    height: 80px;
+                    width: 80px;
+                    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+                    margin: 0px 5px;
+                    border-radius: 5px;
+                }
+                img:hover{
+                    transform: rotate(360deg);
+                    transition: all .6s;
+                }      
+            }
+        }
             @keyframes lineAround {
                 0% {
                     background-size:    0 1px,
@@ -245,7 +277,7 @@ body{
                                         1px 100%;
                 }
             }
-            .infoBasicAnimation {
+            .infoBasicAnimation{
                 background-repeat: no-repeat;
                 background-image:   linear-gradient(to right, $accentColor 100%, $accentColor 100%),
                                     linear-gradient(to bottom, $accentColor 100%, $accentColor 100%),
@@ -262,46 +294,42 @@ body{
                 animation: lineAround 1.25s cubic-bezier(0.19, 1, 0.22, 1) 1;
                 animation-play-state: paused;
             }
-            .infoBasicAnimation:hover {
+            .infoBasicAnimation:hover{
                 animation-play-state: running;
                 transform: scale(1.03);
                 transition: ease-in-out 0.3s;
             }
-            .infoLangBox{
+        .footerSection{
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            .footerBox{
                 display: flex;
                 flex-direction: row;
                 justify-content: center;
-                align-items: center;
-                img{
-                    height: 100px;
-                    width: 100px;
+                padding: 0rem 2rem;
+                box-shadow: 0px -2px rgba( #000000, 0.19);
+                .footerCopyright{
+                    font-weight: bold;
+                }
+                .footerIcons{
+                    list-style: none;
+                    li{
+                        display: inline-block;
+                        a{
+                            text-decoration: none;
+                            color: $accentColor;
+                        }
+                    }
+                    li:hover{
+                        transform: scale(1.25);
+                        transition: all .3s;
+                    }
                 }
             }
         }
     }
 }
-
-::-webkit-scrollbar-track
-{
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-	border-radius: 10px;
-	background-color: #f1f2f6;
-}
-
-::-webkit-scrollbar
-{
-	width: 6px;
-	background-color: #f1f2f6;
-}
-::-webkit-scrollbar-thumb
-{
-	border-radius: 10px;
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-    box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-	background-color: $accentColor;
-}
-
 @media (min-width: 900px) {
     body{
         .mainContainer{
