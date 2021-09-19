@@ -3,21 +3,25 @@ html{
     scroll-behavior: smooth;
 }
 body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     margin: 0;
     padding: 0;
     color: $accentColor;
     background-color: $mainColor;
     font-family: 'Glory', "Arial";
-    overflow: hidden;
     .mainContainer{
         display: flex;
-        width: 100vw;
-        height: 100vh;
+        width: 100%;
+        height: 100%;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
         .circle {
             position: absolute;
-            top: 80vh;
-            left: 45vw;
+            top: 85vh;
+            left: 50vw;
             width: 10px;
             height: 10px;
             border-radius: 50%;
@@ -26,6 +30,9 @@ body{
             transform: scale(0) rotate(0deg) translate(-50%, -50%);
             animation: circle 8s ease-in forwards infinite;
           }
+          .circleOne{
+              display: none;
+          }
           .circle:nth-child(2) {
             border-color: #FFF ;
           }
@@ -33,12 +40,12 @@ body{
             display: none;
             animation-delay: 1s;
             left: 15vw;
-            top: 65vh;
+            top: 75vh;
           }
           .circle:nth-child(3) {
             animation-delay: 2s;
             left: 85vw;
-            top: 80vh;
+            top: 90vh;
           }
           .circle:nth-child(4) {
             animation-delay: 3s;
@@ -52,6 +59,7 @@ body{
           }
           .square {
             position: absolute;
+            display: none;
             top: 10vh;
             left: 35vw;
             width: 10px;
@@ -133,6 +141,7 @@ body{
             padding: 2rem 0rem;
             text-align: center;
             transition: all 0.3s;
+            margin-top: -60px;
             .textHeader{
                 h1{
                     position: relative;
@@ -185,8 +194,12 @@ body{
             .infoHeader{
                 margin-top: 10px;
             }
+            .infoSubHeader{
+                margin: 0px 0px -20px 0px;
+            }
             .infoBlockOne{
                     text-align: center;
+                    margin-top: -35px;
                     a{
                         position: relative;
                     }
@@ -221,10 +234,6 @@ body{
                     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
                     margin: 0px 5px;
                     border-radius: 5px;
-                }
-                img:hover{
-                    transform: rotate(360deg);
-                    transition: all .6s;
                 }      
             }
             .infoLangBoxSub{
@@ -238,11 +247,34 @@ body{
                     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
                     margin: 0px 5px;
                     border-radius: 5px;
+                }     
+            }
+            .infoCvDownload{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: row;
+                i{
+                    padding: 5px;
                 }
-                img:hover{
-                    transform: rotate(360deg);
-                    transition: all .6s;
-                }      
+                .ctaButton{
+                    padding: 0.6rem 1.2rem;
+                    background: $accentColor;
+                    border-radius: 5px;
+                    text-decoration: none;
+                    color: $mainColor;
+                    font-weight: bold;
+                    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+                    margin: -5px 10px 5px 0px;
+                }
+                .ctaButton:hover{
+                    border: 1px solid $accentColor;
+                    background: $mainColor;
+                    color: $accentColor;
+                    transition: all .2s;
+                    box-shadow: none;
+                    font-weight: bold;
+                }
             }
         }
             @keyframes lineAround {
@@ -299,10 +331,17 @@ body{
                 transform: scale(1.03);
                 transition: ease-in-out 0.3s;
             }
+            .infoBasicAnimationOver{
+                animation-play-state: paused;
+                background-size: 0% 0%;
+                transition: ease-in-out 0.3s;
+            }
         .footerSection{
-            position: fixed;
-            bottom: 0;
+            position: relative;
             width: 100%;
+            bottom: 0;
+            left: 0;
+            margin-top: 50px;
             .footerBox{
                 display: flex;
                 flex-direction: row;
@@ -333,8 +372,14 @@ body{
 @media (min-width: 900px) {
     body{
         .mainContainer{
+            .circle{
+                display: block;
+            }
             .circle:nth-child(2){
                 display:block;
+            }
+            .square{
+                display: block;
             }
             .topHeader{
                 nav{
@@ -353,6 +398,7 @@ body{
                 text-align: justify;
             }
             .footerSection{
+                position: fixed;
                 .footerBox{
                     justify-content: center;
                 }

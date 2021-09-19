@@ -140,7 +140,7 @@ body{
                     position: relative;
                     font-size: 46px;
                     display: block;
-                    margin-bottom: -20px; 
+                    margin-bottom: -20px;
                 }
                 h1:after{
                     position: absolute;
@@ -284,6 +284,11 @@ body{
         .infoBasicAnimation:hover {
             animation-play-state: running;
             transform: scale(1.03);
+            transition: ease-in-out 0.3s;
+        }
+        .infoBasicAnimationOver{
+            animation-play-state: paused;
+            background-size: 0% 0%;
             transition: ease-in-out 0.3s;
         }
         .ctaButtonBox{

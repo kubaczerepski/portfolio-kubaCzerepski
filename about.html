@@ -14,7 +14,7 @@
 <body>
     <main class="mainContainer">
         <div class="circleSelector">
-            <div class="circle">
+            <div class="circle circleOne">
     
             </div>
             <div class="circle">
@@ -53,11 +53,13 @@
                 .about()
             </p>
             <p class="infoSubHeader">
-                Cześć, jestem Kuba!
+                <h3>Cześć, jestem Kuba!</h3>
             </p>
             <p class="infoBlockOne">
                 <p>.description()</p>
                 <p>Jestem młodym programistą webowym który chętnie pomoże ci w budowie wizerunku!.</p>
+                <p>Jedną z moich pasji jest Frontend i wszystko co z nim związane, od tworzenia koncepcji po animację oraz sam w sobie proces tworzenia witryny.</p>
+                <p>Podczas tworzenia moich projektów staram się utrzymywać najlepsze praktyki i ciągle udoskonalać moje umiejętności pod każdym względem analizując mój kod.</p>
                 <p>Aktualnie jestem w ciągłym procesie nauki, do tego czasu udało mi się opanować takie języki i ich frameworki jak:</p>
             </p>
             <p class="infoLangBox">
@@ -67,6 +69,13 @@
             <p class="infoLangBoxSub">
                 <img src="assets/jsLogo.png">
                 <img src="assets/sassLogo.png">
+            </p>
+            <p>Sprawdź moje CV</p>
+            <p class="infoCvDownload">
+                <i class="icon-attach"></i>
+                <a class="ctaButton" href="assets/CV Jakub Czerepski.docx">
+                    Pobierz
+                </a>
             </p>
         </section>
         <footer class="footerSection">
@@ -81,14 +90,19 @@
     </main>
     <script>
         let box = document.querySelector(".infoBasic");
-        function deleteAnimation() {
-            box.classList.remove('infoBasicAnimation');
-        }
         function addAnimation (){
             box.classList.add('infoBasicAnimation');
+            box.classList.remove('infoBasicAnimationOver');
+            setTimeout( function() {
+                box.classList.add('infoBasicAnimationOver');
+            },3000);
+        }
+        function deleteAnimation() {
+            box.classList.remove('infoBasicAnimation');
+            box.classList.add('infoBasicAnimationOver');
         }
         box.addEventListener("mouseleave",deleteAnimation);
         box.addEventListener("mouseover",addAnimation);
-    </script>  
+    </script>   
 </body>
 </html>

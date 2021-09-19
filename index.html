@@ -48,12 +48,12 @@
         </header>
         <section class="nameBox">
             <div class="nameHeader">
-                <h1>Kuba Czerepski</h1>
+                <h1 class="imieBox"></h1>
                 <hr>
-                <h3>Front End Developer</h3>
+                <h3 class="subBox">Front End Developer</h3>
             </div>
         </section>
-        <section class="infoBasic">
+        <section class="infoBasic infoBasicAnimationOver">
             <div class="infoBox">
                 <p class="infoHeader">
                     .info()
@@ -91,16 +91,39 @@
             </div>
         </footer>
     </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
     <script>
         let box = document.querySelector(".infoBasic");
-        function deleteAnimation() {
-            box.classList.remove('infoBasicAnimation');
-        }
         function addAnimation (){
             box.classList.add('infoBasicAnimation');
+            box.classList.remove('infoBasicAnimationOver');
+            setTimeout( function() {
+                box.classList.add('infoBasicAnimationOver');
+            },3000);
+        }
+        function deleteAnimation() {
+            box.classList.remove('infoBasicAnimation');
+            box.classList.add('infoBasicAnimationOver');
         }
         box.addEventListener("mouseleave",deleteAnimation);
         box.addEventListener("mouseover",addAnimation);
+    </script>
+    <script>
+        let tekstImie = " Kuba Czerepski ";
+        let boxImie = document.querySelector(".imieBox");
+        let x = 0;
+        function wypiszImie (){
+            if(x < tekstImie.length){
+            x++;
+            setTimeout(wypiszImie,100);
+            boxImie.innerHTML += tekstImie.charAt(x);
+        }
+        }   
+        window.addEventListener("load",wypiszImie);
+    </script>
+    <script>
+        let boxSub = document.querySelector(".subBox");
+        gsap.from(boxSub,{duration:1 , ease:"Power1.out", y:"20",opacity:0,delay:1.7});
     </script>   
 </body>
 </html>
