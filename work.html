@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Projekty</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1 shrink-to-fit=no'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/workPageStyles.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='assets/fontello-2db13937/css/fontello.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Glory&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="overlayLoader">
+
+    </div>
+    <main class="mainContainer">
+        <div class="circleSelector">
+            <div class="circle">
+    
+            </div>
+            <div class="circle">
+                
+            </div>
+            <div class="circle">
+                
+            </div>
+            <div class="circle">
+                
+            </div>
+            <div class="circle">
+                
+            </div>
+            <div class="square">
+                
+            </div>
+        </div>
+        <header class="topHeader">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="work.html">Work</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="nameBox">
+            <div class="nameHeader">
+                <h1>Moje Projekty</h1>
+            </div>
+        </section>
+        <section class="projectBasic">
+            <div class="projectBox">
+                <div class="projectBlockOne">
+                    Oto moje projekty!
+                </div>
+                <div class="projectWorkDivider">
+                    <div class="workSlides fade">
+                        <a href="https://blog.cyber52.com"><img src="assets/Cyber 52 Blog - Official Logo.png" alt=""></a>
+                      </div>
+                      <div class="workSlides fade">
+                        <a href="https://kubaczerepski.github.io/To-Do---Kuba-Czerepski/"><img src="assets/todo.jpg" alt=""></a>
+                      </div>
+                      <a class="ostatni" onclick="ktory(-1)"><i class="icon-angle-left"></i></a>
+                      <a class="nastepny" onclick="ktory(1)"><i class="icon-angle-right"></i></a>
+                </div>
+            </div>
+        </section>
+        <section class="ctaButtonBox">
+            <div class="boxDivider">
+                <a class="ctaButton" href="contact.html">
+                    Skontaktuj się
+                </a>
+            </div>
+        </section>
+        <footer class="footerSection">
+            <div class="footerBox">
+                <p class="footerCopyright">Kuba Czerepski | 2021 &copy;</p>
+                <ul class="footerIcons">
+                    <li><a href=""><i class="icon-github-circled-alt2"></i></a></li>
+                    <li><a href=""><i class="icon-linkedin-circled"></i></a></li>
+                </ul>
+            </div>
+        </footer>
+    </main>
+    <script>
+        let box = document.querySelector(".projectBasic");
+        function addAnimation (){
+            box.classList.add('projectBasicAnimation');
+            box.classList.remove('projectBasicAnimationOver');
+            setTimeout( function() {
+                box.classList.add('projectBasicAnimationOver');
+            },3000);
+        }
+        function deleteAnimation() {
+            box.classList.remove('projectBasicAnimation');
+            box.classList.add('projectBasicAnimationOver');
+        }
+        box.addEventListener("mouseleave",deleteAnimation);
+        box.addEventListener("mouseover",addAnimation);
+    </script>
+    <script>
+        let slideIndex = 1;
+        pokazslide(slideIndex);
+
+
+        function ktory(n) {
+        pokazslide(slideIndex += n);
+        }
+
+        function aktualny(n) {
+        pokazslide(slideIndex = n);
+        }
+
+        function pokazslide(n) {
+        var i;
+        var slides = document.getElementsByClassName("workSlides");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[slideIndex-1].style.display = "block";
+        }
+    </script>   
+</body>
+</html>
