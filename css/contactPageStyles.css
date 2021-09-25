@@ -256,7 +256,7 @@ body .mainContainer .nameBox .nameHeader h3:hover:after {
   width: 100%;
 }
 
-body .mainContainer .projectBasic {
+body .mainContainer .contactBasic {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -276,54 +276,42 @@ body .mainContainer .projectBasic {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   font-weight: bold;
-  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   margin: 0 auto;
   border-radius: 5px;
   background-size: "0px 0px";
 }
 
-body .mainContainer .projectBasic a {
+body .mainContainer .contactBasic a {
   text-decoration: none;
   color: #C0C0C0;
   text-shadow: 0px 1px black;
   cursor: pointer;
 }
 
-body .mainContainer .projectBasic hr {
+body .mainContainer .contactBasic hr {
   opacity: 0;
 }
 
-body .mainContainer .projectBasic .projectBlockOne {
+body .mainContainer .contactBasic .contactBlockOne {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
   font-size: larger;
   padding-top: 10px;
 }
 
-body .mainContainer .projectBasic .projectBlockOne a {
-  position: relative;
-}
-
-body .mainContainer .projectBasic .projectBlockOne a:after {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  margin: auto;
-  content: '';
-  width: 0%;
-  height: 1px;
-  -webkit-transition: all .3s;
-  transition: all .3s;
-  background: #C0C0C0;
-  color: transparent;
-}
-
-body .mainContainer .projectBasic .projectBlockOne a:hover:after {
+body .mainContainer .contactBasic .contactFormBox {
   width: 100%;
 }
 
-body .mainContainer .projectBasic .projectWorkDivider {
+body .mainContainer .contactBasic .contactFormBox form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -331,84 +319,80 @@ body .mainContainer .projectBasic .projectWorkDivider {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 2em 2em;
-}
-
-body .mainContainer .projectBasic .projectWorkDivider img {
-  width: 200px;
-  height: 200px;
-  border-radius: 5px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
   -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
           box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  border-radius: 5px;
+  padding: 1em 0em;
+  margin: 10px 0px 10px 0px;
   -webkit-transition: all .3s;
   transition: all .3s;
 }
 
-body .mainContainer .projectBasic .projectWorkDivider .ostatni, body .mainContainer .projectBasic .projectWorkDivider .nastepny {
+body .mainContainer .contactBasic .contactFormBox form input {
+  margin: 10px;
+  padding: 10px;
+  background: #1A1A1D;
+  border-radius: 5px;
+  border: 1px solid #C0C0C0;
+  text-align: center;
+  color: #C0C0C0;
+}
+
+body .mainContainer .contactBasic .contactFormBox form input:nth-child(1) {
+  width: 80%;
+}
+
+body .mainContainer .contactBasic .contactFormBox form input:nth-child(2) {
   display: block;
+  min-height: 200px;
+  max-height: 300px;
+  width: 90%;
+}
+
+body .mainContainer .contactBasic .contactFormBox form #formSubmit {
   cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 8px;
-  color: white;
+  padding: 0.7rem 1rem;
+  background: #C0C0C0;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #1A1A1D;
   font-weight: bold;
-  font-size: 18px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  border-radius: 0 3px 3px 0;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-
-body .mainContainer .projectBasic .projectWorkDivider .ostatni {
-  left: 0;
-}
-
-body .mainContainer .projectBasic .projectWorkDivider .nastepny {
-  right: 0;
-}
-
-body .mainContainer .projectBasic .projectWorkDivider .ostatni:hover {
-  background: #C0C0C0;
-  border-radius: 5px;
   -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
           box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
-body .mainContainer .projectBasic .projectWorkDivider .nastepny:hover {
-  background: #C0C0C0;
-  border-radius: 5px;
+body .mainContainer .contactBasic .contactFormBox form #formSubmit:hover {
+  border: 1px solid #C0C0C0;
+  background: #1A1A1D;
+  color: #C0C0C0;
+  -webkit-transition: ease-in-out .2s;
+  transition: ease-in-out .2s;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  font-weight: bold;
+}
+
+body .mainContainer .contactBasic .emailSentPopUp {
+  display: none;
+  width: 90%;
+  margin: 20px auto;
   -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
           box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-}
-
-body .mainContainer .projectBasic .projectWorkDivider .fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 0.5s;
-  animation-name: fade;
-  animation-duration: 0.5s;
-}
-
-@-webkit-keyframes fade {
-  from {
-    opacity: .4;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fade {
-  from {
-    opacity: .4;
-  }
-  to {
-    opacity: 1;
-  }
+  padding: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0;
 }
 
 @-webkit-keyframes lineAround {
@@ -447,7 +431,7 @@ body .mainContainer .projectBasic .projectWorkDivider .fade {
   }
 }
 
-body .mainContainer .projectBasicAnimation {
+body .mainContainer .contactBasicAnimation {
   background-repeat: no-repeat;
   background-image: -webkit-gradient(linear, left top, right top, color-stop(100%, #C0C0C0), to(#C0C0C0)), -webkit-gradient(linear, left top, left bottom, color-stop(100%, #C0C0C0), to(#C0C0C0)), -webkit-gradient(linear, left top, right top, color-stop(100%, #C0C0C0), to(#C0C0C0)), -webkit-gradient(linear, left top, left bottom, color-stop(100%, #C0C0C0), to(#C0C0C0));
   background-image: linear-gradient(to right, #C0C0C0 100%, #C0C0C0 100%), linear-gradient(to bottom, #C0C0C0 100%, #C0C0C0 100%), linear-gradient(to right, #C0C0C0 100%, #C0C0C0 100%), linear-gradient(to bottom, #C0C0C0 100%, #C0C0C0 100%);
@@ -459,63 +443,19 @@ body .mainContainer .projectBasicAnimation {
           animation-play-state: paused;
 }
 
-body .mainContainer .projectBasicAnimation:hover {
+body .mainContainer .contactBasicAnimation:hover {
   -webkit-animation-play-state: running;
           animation-play-state: running;
   -webkit-transition: ease-in-out 0.3s;
   transition: ease-in-out 0.3s;
 }
 
-body .mainContainer .projectBasicAnimationOver {
+body .mainContainer .contactBasicAnimationOver {
   -webkit-animation-play-state: paused;
           animation-play-state: paused;
   background-size: 0% 0%;
   -webkit-transition: ease-in-out 0.3s;
   transition: ease-in-out 0.3s;
-}
-
-body .mainContainer .ctaButtonBox {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  text-align: center;
-  width: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 2rem 0rem;
-  text-align: center;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-body .mainContainer .ctaButtonBox .ctaButton {
-  padding: 1rem 1rem;
-  background: #C0C0C0;
-  border-radius: 5px;
-  text-decoration: none;
-  color: #1A1A1D;
-  font-weight: bold;
-  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-}
-
-body .mainContainer .ctaButtonBox .ctaButton:hover {
-  border: 1px solid #C0C0C0;
-  background: #1A1A1D;
-  color: #C0C0C0;
-  -webkit-transition: ease-in-out .2s;
-  transition: ease-in-out .2s;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  font-weight: bold;
 }
 
 body .mainContainer .footerSection {
@@ -594,59 +534,19 @@ body .mainContainer .footerSection .footerBox .footerIcons li:hover {
   body .mainContainer .topHeader nav a {
     padding: 10px;
   }
-  body .mainContainer .projectBasic {
+  body .mainContainer .contactBasic {
     width: 60%;
     margin: 0 auto;
     border-radius: 5px;
   }
-  body .mainContainer .projectBasic .projectBlockOne {
+  body .mainContainer .contactBasic .contactBlockOne {
     font-size: 28px;
   }
-  body .mainContainer .projectBasic .projectWorkDivider {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    width: 90%;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    position: relative;
+  body .mainContainer .contactBasic .contactFormBox {
+    min-width: 600px;
   }
-  body .mainContainer .projectBasic .projectWorkDivider img {
-    margin-left: 2em;
-    -webkit-box-shadow: none;
-            box-shadow: none;
-    width: 100%;
-    height: 100%;
-  }
-  body .mainContainer .projectBasic .projectWorkDivider .workSlides {
-    display: none;
-  }
-  body .mainContainer .projectBasic .projectWorkDivider .ostatni, body .mainContainer .projectBasic .projectWorkDivider .nastepny {
-    display: block;
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s;
-    border-radius: 0 3px 3px 0;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
-  }
-  body .mainContainer .projectBasic .projectWorkDivider .ostatni {
-    left: 0;
-  }
-  body .mainContainer .projectBasic .projectWorkDivider .nastepny {
-    right: -14%;
+  body .mainContainer .contactBasic .contactFormBox form input:nth-child(2) {
+    min-height: 200px;
   }
   body .mainContainer .footerSection {
     position: fixed;
@@ -657,4 +557,4 @@ body .mainContainer .footerSection .footerBox .footerIcons li:hover {
             justify-content: center;
   }
 }
-/*# sourceMappingURL=workPageStyles.css.map */
+/*# sourceMappingURL=contactPageStyles.css.map */

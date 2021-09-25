@@ -3,9 +3,9 @@
 <head>
     <meta charset='UTF-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Kuba Czerepski - Portfolio</title>
+    <title>Kontakt</title>
     <meta name='viewport' content='width=device-width, initial-scale=1 shrink-to-fit=no'>
-    <link rel='stylesheet' type='text/css' media='screen' href='css/mainStyles.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/contactPageStyles.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='assets/fontello-2db13937/css/fontello.css'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -48,37 +48,27 @@
         </header>
         <section class="nameBox">
             <div class="nameHeader">
-                <h1 class="imieBox"></h1>
-                <hr>
-                <h3 class="subBox">Front End Developer</h3>
             </div>
         </section>
-        <section class="infoBasic infoBasicAnimationOver">
-            <div class="infoBox">
-                <p class="infoHeader">
-                    .info()
-                </p>
-                <p class="infoSubHeader">
-                    Witaj w moim kawałku internetu!.
-                </p>
-                <p class="infoBlockOne">
-                    Mam Nadzieję że podoba ci się moja strona!.
-                    Znajdziesz tutaj moje projekty oraz informacje o mnie, zwłaszcza w sekcji <a href="about.html" class="aboutRedirect">About</a>.
-                    <hr> 
-                    Jeżeli chcesz nawiązać ze mną współpracę lub zaoferować mi ofertę pracy, zapraszam do kontaktu przez email:
-                </p>
-                <p class="infoEmail">contact@kubaczerepski.pl</p>
-                <p class="infoBlockGreeting">
-                    Życzę ci miłego dnia! 
-                    <i class="icon-emo-happy"></i>
-                </p>
+        <section class="contactBasic">
+            <div class="contactBox">
+                <div class="contactBlockOne">
+                    <h1>Skontaktuj się ze mną!</h1>
+                </div>
+                <div class="contactFormBox">
+                    <form  class="contactBasicForm">
+                        <input type="text" name="emailTitle" placeholder="Tytuł">
+                        <input type="text" name="emailText" placeholder="Tekst" contenteditable="true">
+                        <input type="submit" name="emailSubmit" id="formSubmit" value="Wyślij!">
+                    </form>
+                </div>
+                <div class="emailSentPopUp">
+                    <p>Wiadomość została wysłana</p>
+                </div>
             </div>
         </section>
         <section class="ctaButtonBox">
             <div class="boxDivider">
-                <a class="ctaButton" href="work.html">
-                    Moje Projekty
-                </a>
             </div>
         </section>
         <footer class="footerSection">
@@ -93,37 +83,29 @@
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
     <script>
-        let box = document.querySelector(".infoBasic");
+        let box = document.querySelector(".contactBasicForm");
         function addAnimation (){
-            box.classList.add('infoBasicAnimation');
-            box.classList.remove('infoBasicAnimationOver');
+            box.classList.add('contactBasicAnimation');
+            box.classList.remove('contactBasicAnimationOver');
             setTimeout( function() {
-                box.classList.add('infoBasicAnimationOver');
+                box.classList.add('contactBasicAnimationOver');
             },3000);
         }
         function deleteAnimation() {
-            box.classList.remove('infoBasicAnimation');
-            box.classList.add('infoBasicAnimationOver');
+            box.classList.remove('contactBasicAnimation');
+            box.classList.add('contactBasicAnimationOver');
         }
         box.addEventListener("mouseleave",deleteAnimation);
         box.addEventListener("mouseover",addAnimation);
-    </script>
+    </script> 
     <script>
-        let tekstImie = " Kuba Czerepski ";
-        let boxImie = document.querySelector(".imieBox");
-        let x = 0;
-        function wypiszImie (){
-            if(x < tekstImie.length){
-            x++;
-            setTimeout(wypiszImie,100);
-            boxImie.innerHTML += tekstImie.charAt(x);
+        let noti = document.querySelector(".emailSentPopUp");
+        let button = document.querySelector("#formSubmit");
+        function emailSuccess (){
+            noti.style.display = "flex";
+            gsap.from(noti,{duration:1 , ease:"Power1.out", y:"20",opacity:0,delay:0.7});
         }
-        }   
-        window.addEventListener("load",wypiszImie);
-    </script>
-    <script>
-        let boxSub = document.querySelector(".subBox");
-        gsap.from(boxSub,{duration:1 , ease:"Power1.out", y:"20",opacity:0,delay:1.7});
-    </script>   
+        button.addEventListener('click',emailSuccess);
+    </script> 
 </body>
 </html>

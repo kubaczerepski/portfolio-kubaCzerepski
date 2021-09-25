@@ -184,7 +184,7 @@ body{
                 }
             }
         }
-        .projectBasic{
+        .contactBasic{
             position: relative;
             display: flex;
             flex-direction: column;
@@ -194,7 +194,6 @@ body{
             align-items: center;
             transition: all 0.3s;
             font-weight: bold;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
             margin: 0 auto;
             border-radius: 5px;
             background-size: "0px 0px";
@@ -208,89 +207,76 @@ body{
             hr{
                 opacity: 0;
             }
-            .projectBlockOne{
+            .contactBlockOne{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
                     text-align: center;
                     font-size: larger;
                     padding-top: 10px;
-                    a{
-                        position: relative;
+            }
+            .contactFormBox{
+                width: 100%;
+                form{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+                    border-radius: 5px;
+                    padding: 1em 0em;
+                    margin: 10px 0px 10px 0px;
+                    transition: all .3s;
+                    input{
+                    margin: 10px;
+                    padding: 10px;
+                    background: $mainColor;
+                    border-radius: 5px;
+                    border: 1px solid $accentColor;
+                    text-align: center;
+                    color: $accentColor;
                     }
-                    a:after{
-                        position: absolute;
-                        bottom: 0;
-                        right: 0;
-                        left: 0;
-                        margin: auto;
-                        content: '';
-                        width: 0%;
-                        height: 1px;
-                        transition: all .3s;
+                    input:nth-child(1){
+                        width: 80%;
+                    }
+                    input:nth-child(2){
+                        display:block;
+                        min-height:200px;
+                        max-height: 300px;
+                        width: 90%;
+                    }
+                    #formSubmit{
+                        cursor: pointer;
+                        padding: 0.7rem 1rem;
                         background: $accentColor;
-                        color: transparent;
+                        border-radius: 5px;
+                        text-decoration: none;
+                        color: $mainColor;
+                        font-weight: bold;
+                        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
                     }
-                    a:hover:after{
-                        width: 100%;
+                    #formSubmit:hover{
+                        border: 1px solid $accentColor;
+                        background: $mainColor;
+                        color: $accentColor;
+                        transition: ease-in-out .2s;
+                        box-shadow: none;
+                        font-weight: bold;
                     }
+                }
             }
-            .projectWorkDivider{
-                display: flex;
-                flex-direction:column;
-                padding: 2em 2em;
-                img{
-                    width: 200px;
-                    height: 200px;
-                    border-radius:5px;
-                    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-                    transition: all .3s;                
-                }
-                .ostatni,.nastepny {
-                    display: block;
-                    cursor: pointer;
-                    position: absolute;
-                    top: 50%;
-                    width: auto;
-                    margin-top: -22px;
-                    padding: 8px;
-                    color: white;
-                    font-weight: bold;
-                    font-size: 18px;
-                    transition:  all 0.3s;
-                    border-radius: 0 3px 3px 0;
-                    user-select: none;
-                }
-                .ostatni{
-                    left: 0;
-                }
-                  .nastepny {
-                    right: 0;
-                }
-                .ostatni:hover{
-                    background: $accentColor;
-                    border-radius: 5px;
-                    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-                }
-                .nastepny:hover{
-                    background: $accentColor;
-                    border-radius: 5px;
-                    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-                }
-                .fade {
-                    -webkit-animation-name: fade;
-                    -webkit-animation-duration: 0.5s;
-                    animation-name: fade;
-                    animation-duration: 0.5s;
-                  }
+            .emailSentPopUp{
+                display: none;
+                width: 90%;
+                margin: 20px auto;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+                padding: 20px;
+                justify-content: center;
+                align-items: center;
+                opacity: 0;
             }
-        }  
-          @-webkit-keyframes fade {
-            from {opacity: .4}
-            to {opacity: 1}
-          }
-          
-          @keyframes fade {
-            from {opacity: .4}
-            to {opacity: 1}
-          }
+        }
         @keyframes lineAround {
             0% {
                 background-size:    0 1px,
@@ -323,7 +309,7 @@ body{
                                     1px 100%;
             }
         }
-        .projectBasicAnimation {
+        .contactBasicAnimation {
             background-repeat: no-repeat;
             background-image:   linear-gradient(to right, $accentColor 100%, $accentColor 100%),
                                 linear-gradient(to bottom, $accentColor 100%, $accentColor 100%),
@@ -340,43 +326,14 @@ body{
             animation: lineAround 1.25s cubic-bezier(0.19, 1, 0.22, 1) 1;
             animation-play-state: paused;
         }
-        .projectBasicAnimation:hover {
+        .contactBasicAnimation:hover {
             animation-play-state: running;
             transition: ease-in-out 0.3s;
         }
-        .projectBasicAnimationOver{
+        .contactBasicAnimationOver{
             animation-play-state: paused;
             background-size: 0% 0%;
             transition: ease-in-out 0.3s;
-        }
-        .ctaButtonBox{
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-            width: 100%;
-            justify-content: center;
-            align-items: center;
-            padding: 2rem 0rem;
-            text-align: center;
-            transition: all 0.3s;
-            .ctaButton{
-                padding: 1rem 1rem;
-                background: $accentColor;
-                border-radius: 5px;
-                text-decoration: none;
-                color: $mainColor;
-                font-weight: bold;
-                box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-            }
-            .ctaButton:hover{
-                border: 1px solid $accentColor;
-                background: $mainColor;
-                color: $accentColor;
-                transition: ease-in-out .2s;
-                box-shadow: none;
-                font-weight: bold;
-            }
-            
         }
         .footerSection{
             position: fixed;
@@ -443,47 +400,19 @@ body{
                     }
                 }
             }
-            .projectBasic{
+            .contactBasic{
                 width: 60%;
                 margin: 0 auto;
                 border-radius: 5px;
-                .projectBlockOne{
+                .contactBlockOne{
                     font-size: 28px;
                 }
-                .projectWorkDivider{
-                    display: flex;
-                    width: 90%;
-                    flex-direction: row;
-                    position: relative;
-                    img{
-                        margin-left: 2em;
-                        box-shadow: none;
-                        width:100%;
-                        height:100%;
-                    }
-                    .workSlides{
-                        display: none;
-                    }
-                    .ostatni,.nastepny {
-                        display: block;
-                        cursor: pointer;
-                        position: absolute;
-                        top: 50%;
-                        width: auto;
-                        margin-top: -22px;
-                        padding: 16px;
-                        color: white;
-                        font-weight: bold;
-                        font-size: 18px;
-                        transition:  all 0.3s;
-                        border-radius: 0 3px 3px 0;
-                        user-select: none;
-                    }
-                    .ostatni{
-                        left: 0;
-                    }
-                      .nastepny {
-                        right: -14%;
+                .contactFormBox{
+                    min-width: 600px;
+                    form{
+                        input:nth-child(2){
+                            min-height: 200px;
+                        }
                     }
                 }
             }
