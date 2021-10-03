@@ -42,7 +42,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="work.html">Work</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="contact.php">Contact</a></li>
                 </ul>
             </nav>
         </header>
@@ -56,9 +56,10 @@
                     <h1>Skontaktuj się ze mną!</h1>
                 </div>
                 <div class="contactFormBox">
-                    <form  class="contactBasicForm">
+                    <form method="POST" class="contactBasicForm">
                         <input type="text" name="emailTitle" placeholder="Tytuł">
-                        <input type="text" name="emailText" placeholder="Tekst" contenteditable="true">
+                        <input type="text" id="email" name="emailContact" placeholder="Twój Email">
+                        <textarea  name="emailText" contenteditable="true"></textarea>
                         <input type="submit" name="emailSubmit" id="formSubmit" value="Wyślij!">
                     </form>
                 </div>
@@ -75,8 +76,8 @@
             <div class="footerBox">
                 <p class="footerCopyright">Kuba Czerepski | 2021 &copy;</p>
                 <ul class="footerIcons">
-                    <li><a href="https://github.com/kubaczerepski"><i class="icon-github-circled-alt2"></i></a></li>
-                    <li><a href="https://www.linkedin.com/in/jakub-czerepski-a9090b212/"><i class="icon-linkedin-circled"></i></a></li>
+                    <li><a target="_blank" href="https://github.com/kubaczerepski"><i class="icon-github-circled-alt2"></i></a></li>
+                    <li><a target="_blank" href="https://www.linkedin.com/in/jakub-czerepski-a9090b212/"><i class="icon-linkedin-circled"></i></a></li>
                 </ul>
             </div>
         </footer>
@@ -98,14 +99,23 @@
         box.addEventListener("mouseleave",deleteAnimation);
         box.addEventListener("mouseover",addAnimation);
     </script> 
+    <?php
+
+    $title = $_POST["emailTitle"];
+    $contact = $_POST["emailContact"];
+    $message = $_POST["emailText"];
+
+    mail("kubaczerepski@gmail.com",$title,$message);
+    echo "
     <script>
-        let noti = document.querySelector(".emailSentPopUp");
-        let button = document.querySelector("#formSubmit");
-        function emailSuccess (){
-            noti.style.display = "flex";
-            gsap.from(noti,{duration:1 , ease:"Power1.out", y:"20",opacity:0,delay:0.7});
-        }
-        button.addEventListener('click',emailSuccess);
-    </script> 
+    let noti = document.querySelector('.emailSentPopUp');
+    let button = document.querySelector('#formSubmit');
+    function emailSuccess (){
+        noti.style.display = 'flex';
+        gsap.from(noti,{duration:1 , ease:'Power1.out', y:'20',opacity:0,delay:0.7});
+    }
+    button.addEventListener('click',emailSuccess);
+    </script>";
+    ?> 
 </body>
 </html>

@@ -4,7 +4,7 @@
     <meta charset='UTF-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Kuba Czerepski - Portfolio</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1 shrink-to-fit=no'>
+    <meta nameLetter='viewport' content='width=device-width, initial-scale=1 shrink-to-fit=no'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/mainStyles.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='assets/fontello-2db13937/css/fontello.css'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,7 +13,9 @@
 </head>
 <body>
     <div class="overlayLoader">
-
+        <div class="textBounce">
+            <div class="threeDot"></div>
+        </div>
     </div>
     <main class="mainContainer">
         <div class="circleSelector">
@@ -42,13 +44,13 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="work.html">Work</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="contact.php">Contact</a></li>
                 </ul>
             </nav>
         </header>
         <section class="nameBox">
             <div class="nameHeader">
-                <h1 class="imieBox"></h1>
+                <h1 class="imieBox">Kuba Czerepski</h1>
                 <hr>
                 <h3 class="subBox">Front End Developer</h3>
             </div>
@@ -85,8 +87,8 @@
             <div class="footerBox">
                 <p class="footerCopyright">Kuba Czerepski | 2021 &copy;</p>
                 <ul class="footerIcons">
-                    <li><a href="https://github.com/kubaczerepski"><i class="icon-github-circled-alt2"></i></a></li>
-                    <li><a href="https://www.linkedin.com/in/jakub-czerepski-a9090b212/"><i class="icon-linkedin-circled"></i></a></li>
+                    <li><a  target="_blank" href="https://github.com/kubaczerepski"><i class="icon-github-circled-alt2"></i></a></li>
+                    <li><a  target="_blank" href="https://www.linkedin.com/in/jakub-czerepski-a9090b212/"><i class="icon-linkedin-circled"></i></a></li>
                 </ul>
             </div>
         </footer>
@@ -109,21 +111,32 @@
         box.addEventListener("mouseover",addAnimation);
     </script>
     <script>
-        let tekstImie = " Kuba Czerepski ";
         let boxImie = document.querySelector(".imieBox");
-        let x = 0;
-        function wypiszImie (){
-            if(x < tekstImie.length){
-            x++;
-            setTimeout(wypiszImie,100);
-            boxImie.innerHTML += tekstImie.charAt(x);
-        }
-        }   
-        window.addEventListener("load",wypiszImie);
+        gsap.from(boxImie,{duration:1 , ease:"Power1.out", y:"20",opacity:0,delay:3});
     </script>
     <script>
         let boxSub = document.querySelector(".subBox");
-        gsap.from(boxSub,{duration:1 , ease:"Power1.out", y:"20",opacity:0,delay:1.7});
+        gsap.from(boxSub,{duration:1 , ease:"Power1.out", y:"20",opacity:0,delay:3.5});
+    </script>
+    <script>
+        let letter = document.querySelector(".threeDot")
+        let overlay = document.querySelector(".overlayLoader");
+        setTimeout(function (){
+        gsap.to( letter, {
+        duration: 0.75,
+        x: 250,
+        autoAlpha: 0,
+        ease: "Power1.out",
+        opacity:0,
+        stagger: 1.5
+        });
+        },2000);
+        setTimeout(function(){
+            gsap.to(overlay,{duration:1 , ease:"Power1.out",autoAlpha:0,delay:0.5});
+        },2000);
+        setTimeout(function(){
+            overlay.style.display = "none";
+        },4000);
     </script>   
 </body>
 </html>

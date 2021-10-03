@@ -12,11 +12,101 @@ body{
     background-color: $mainColor;
     font-family: 'Glory', "Arial";
     overflow: hidden;
+    .overlayLoader{
+        position: absolute;
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        background: $mainColor;
+        z-index: 100;
+        align-items: center;
+        justify-content: center;
+        .textBounce{
+            .threeDot {
+                position: relative;
+                width: 10px;
+                height: 10px;
+                border-radius: 5px;
+                background-color: white;
+                color: white;
+                animation: threedotFloating 3s infinite cubic-bezier(0.15, 0.6, 0.9, 0.1);
+              }
+              
+              .threeDot::before, .threeDot::after {
+                content: '';
+                display: inline-block;
+                position: absolute;
+                top: 0;
+              }
+              
+              .threeDot::before {
+                left: -12px;
+                width: 10px;
+                height: 10px;
+                border-radius: 5px;
+                background-color: white;
+                color: white;
+                animation: threedotFloatingBefore 3s infinite ease-in-out;
+              }
+              
+              .threeDot::after {
+                left: -24px;
+                width: 10px;
+                height: 10px;
+                border-radius: 5px;
+                background-color: white;
+                color: white;
+                animation: threedotFloatingAfter 3s infinite cubic-bezier(0.4, 0, 1, 1);
+              }
+              
+              @keyframes threedotFloating {
+                0% {
+                  left: calc(-50% - 5px);
+                }
+                75% {
+                  left: calc(50% + 105px);
+                }
+                100% {
+                  left: calc(50% + 105px);
+                }
+              }
+              
+              @keyframes threedotFloatingBefore {
+                0% {
+                  left: -50px;
+                }
+                50% {
+                  left: -12px;
+                }
+                75% {
+                  left: -50px;
+                }
+                100% {
+                  left: -50px;
+                }
+              }
+              
+              @keyframes threedotFloatingAfter {
+                0% {
+                  left: -100px;
+                }
+                50% {
+                  left: -24px;
+                }
+                75% {
+                  left: -100px;
+                }
+                100% {
+                  left: -100px;
+                }
+              }
+    }
+}
     .mainContainer{
         display: flex;
         width: 100vw;
         height: 100vh;
-        flex-direction: column;
+        flex-direction: column; 
         .circle {
             position: absolute;
             top: 80vh;

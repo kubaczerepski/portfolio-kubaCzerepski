@@ -333,6 +333,11 @@ body .mainContainer .contactBasic .contactFormBox form {
   margin: 10px 0px 10px 0px;
   -webkit-transition: all .3s;
   transition: all .3s;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
 }
 
 body .mainContainer .contactBasic .contactFormBox form input {
@@ -345,15 +350,23 @@ body .mainContainer .contactBasic .contactFormBox form input {
   color: #C0C0C0;
 }
 
-body .mainContainer .contactBasic .contactFormBox form input:nth-child(1) {
+body .mainContainer .contactBasic .contactFormBox form input:nth-child(1), body .mainContainer .contactBasic .contactFormBox form input:nth-child(2) {
   width: 80%;
 }
 
-body .mainContainer .contactBasic .contactFormBox form input:nth-child(2) {
+body .mainContainer .contactBasic .contactFormBox form textarea {
   display: block;
   min-height: 200px;
   max-height: 300px;
   width: 90%;
+  word-wrap: break-word;
+  margin: 10px;
+  padding: 10px;
+  background: #1A1A1D;
+  border-radius: 5px;
+  border: 1px solid #C0C0C0;
+  text-align: left;
+  color: #C0C0C0;
 }
 
 body .mainContainer .contactBasic .contactFormBox form #formSubmit {
@@ -545,7 +558,7 @@ body .mainContainer .footerSection .footerBox .footerIcons li:hover {
   body .mainContainer .contactBasic .contactFormBox {
     min-width: 600px;
   }
-  body .mainContainer .contactBasic .contactFormBox form input:nth-child(2) {
+  body .mainContainer .contactBasic .contactFormBox form input:nth-child(3) {
     min-height: 200px;
   }
   body .mainContainer .footerSection {
