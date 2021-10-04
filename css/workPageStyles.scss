@@ -210,7 +210,8 @@ body{
             }
             .projectBlockOne{
                     text-align: center;
-                    font-size: larger;
+                    font-size: 27px;
+                    padding-left: 5px;
                     padding-top: 10px;
                     a{
                         position: relative;
@@ -435,6 +436,11 @@ body{
     body{
         overflow-y: hidden;
         .mainContainer{
+            .nameBox{
+                .nameHeader{
+                    padding-left: 20px;
+                }
+            }
             .topHeader{
                 nav{
                     padding-right: 2em;
@@ -448,6 +454,7 @@ body{
                 margin: 0 auto;
                 border-radius: 5px;
                 .projectBlockOne{
+                    padding-left: 20px;
                     font-size: 28px;
                 }
                 .projectWorkDivider{
@@ -484,6 +491,13 @@ body{
                     }
                       .nastepny {
                         right: -14%;
+                    }
+                }
+            }
+            .ctaButton{
+                .ctaButtonBox{
+                    .ctaButton{
+                        padding-right: 60px;
                     }
                 }
             }

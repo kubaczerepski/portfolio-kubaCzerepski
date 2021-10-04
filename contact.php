@@ -5,6 +5,7 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Kontakt</title>
     <meta name='viewport' content='width=device-width, initial-scale=1 shrink-to-fit=no'>
+    <link rel="icon" href="assets/websitelogo_7pD_icon.ico">
     <link rel='stylesheet' type='text/css' media='screen' href='css/contactPageStyles.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='assets/fontello-2db13937/css/fontello.css'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -103,9 +104,9 @@
 
     $title = $_POST["emailTitle"];
     $contact = $_POST["emailContact"];
-    $message = $_POST["emailText"];
+    $message = $_POST["emailText"] + $contact;
 
-    mail("kubaczerepski@gmail.com",$title,$message);
+    mail("contact@kubaczerepski.pl",$title,$message);
     echo "
     <script>
     let noti = document.querySelector('.emailSentPopUp');

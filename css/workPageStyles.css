@@ -296,7 +296,8 @@ body .mainContainer .projectBasic hr {
 
 body .mainContainer .projectBasic .projectBlockOne {
   text-align: center;
-  font-size: larger;
+  font-size: 27px;
+  padding-left: 5px;
   padding-top: 10px;
 }
 
@@ -588,6 +589,9 @@ body .mainContainer .footerSection .footerBox .footerIcons li:hover {
   body {
     overflow-y: hidden;
   }
+  body .mainContainer .nameBox .nameHeader {
+    padding-left: 20px;
+  }
   body .mainContainer .topHeader nav {
     padding-right: 2em;
   }
@@ -600,6 +604,7 @@ body .mainContainer .footerSection .footerBox .footerIcons li:hover {
     border-radius: 5px;
   }
   body .mainContainer .projectBasic .projectBlockOne {
+    padding-left: 20px;
     font-size: 28px;
   }
   body .mainContainer .projectBasic .projectWorkDivider {
@@ -647,6 +652,9 @@ body .mainContainer .footerSection .footerBox .footerIcons li:hover {
   }
   body .mainContainer .projectBasic .projectWorkDivider .nastepny {
     right: -14%;
+  }
+  body .mainContainer .ctaButton .ctaButtonBox .ctaButton {
+    padding-right: 60px;
   }
   body .mainContainer .footerSection {
     position: fixed;
