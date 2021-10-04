@@ -2,7 +2,7 @@
 
     $title = $_POST["emailTitle"];
     $contact = $_POST["emailContact"];
-    $message = $_POST["emailText"];
+    $message = $_POST["emailText"]." ".$contact;
 
-    mail("kubaczerepski@gmail.com",$title,$message);
+    mail("contact@kubaczerepski.pl",$title,$message);
 ?>

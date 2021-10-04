@@ -100,23 +100,5 @@
         box.addEventListener("mouseleave",deleteAnimation);
         box.addEventListener("mouseover",addAnimation);
     </script> 
-    <?php
-
-    $title = $_POST["emailTitle"];
-    $contact = $_POST["emailContact"];
-    $message = $_POST["emailText"] + $contact;
-
-    mail("contact@kubaczerepski.pl",$title,$message);
-    echo "
-    <script>
-    let noti = document.querySelector('.emailSentPopUp');
-    let button = document.querySelector('#formSubmit');
-    function emailSuccess (){
-        noti.style.display = 'flex';
-        gsap.from(noti,{duration:1 , ease:'Power1.out', y:'20',opacity:0,delay:0.7});
-    }
-    button.addEventListener('click',emailSuccess);
-    </script>";
-    ?> 
 </body>
 </html>
