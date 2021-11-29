@@ -9,6 +9,6 @@ Personal Portfolio Website
 
 ## Contact Me
 - 📫 **contact@kubaczerepski.pl**
-- 🌐 **kubaczerepski.pl**
+- 🌐 **www.kubaczerepski.pl**
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
